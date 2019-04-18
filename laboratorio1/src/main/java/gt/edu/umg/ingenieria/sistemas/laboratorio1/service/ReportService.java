@@ -1,12 +1,16 @@
 package gt.edu.umg.ingenieria.sistemas.laboratorio1.service;
 
-import org.springframework.stereotype.Repository;
+
+import org.springframework.stereotype.Service;
 
 /**
  *
  * @author Josué Barillas (jbarillas)
  */
-@Repository
+@Service
 public class ReportService {
 
+    public String generarInforme(){
+        return "";
+    }
 }
