@@ -1,11 +1,18 @@
 package gt.edu.umg.ingenieria.sistemas.laboratorio1.utilies;
 
-import java.util.Calendar;
 import java.util.Locale;
-import static java.util.Calendar.*;
 import java.util.Date;
+import java.util.Calendar;
+import static java.util.Calendar.*;
 
 public class Ayuda {
+
+    private static Calendar getCalendar(Date date) {
+        Calendar cal = Calendar.getInstance(Locale.US);
+        cal.setTime(date);
+        return cal;
+    }
+
     public static boolean finIgualNAnios(Date birtDate, int N) {
         Calendar calendar = getCalendar(new Date());
         Calendar calendar1 = getCalendar(birtDate);
@@ -21,9 +28,4 @@ public class Ayuda {
         return diferencia >= N;
     }
 
-    private static Calendar getCalendar(Date date) {
-        Calendar cal = Calendar.getInstance(Locale.US);
-        cal.setTime(date);
-        return cal;
-    }
 }
