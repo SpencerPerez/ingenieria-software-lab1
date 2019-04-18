@@ -1,11 +1,11 @@
-package gt.edu.umg.ingenieria.sistemas.laboratorio1.utils;
+package gt.edu.umg.ingenieria.sistemas.laboratorio1.utilies;
 
 import java.util.Calendar;
 import java.util.Locale;
 import static java.util.Calendar.*;
 import java.util.Date;
 
-public class Helpers {
+public class Ayuda {
     public static boolean finIgualNAnios(Date birtDate, int N) {
         Calendar calendar = getCalendar(new Date());
         Calendar calendar1 = getCalendar(birtDate);
