@@ -11,19 +11,19 @@ public class ErroresModel implements Serializable {
         this.message=message;
     }
 
-    public String getName() {
+    public String getNombre() {
         return name;
     }
 
-    public void setName(String name) {
+    public void setNombre(String name) {
         this.name = name;
     }
 
-    public String getMessage() {
+    public String getMsj() {
         return message;
     }
 
-    public void setMessage(String message) {
+    public void setMsj(String message) {
         this.message = message;
     }
 }
