@@ -6,6 +6,7 @@ import gt.edu.umg.ingenieria.sistemas.laboratorio1.service.ReportService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.ServletContext;
 import java.util.List;
 
 /**
@@ -18,11 +19,13 @@ public class ClientController {
 
     private final ReportService _reportService;
     private final ClientService _clientService;
+    private final ServletContext _servletContext;
 
     @Autowired
-    public ClientController(ReportService reportService, ClientService clientService) {
+    public ClientController(ReportService reportService, ClientService clientService,ServletContext servletContext) {
         this._reportService = reportService;
         this._clientService = clientService;
+        this._servletContext= servletContext;
     }
 
     @GetMapping("/getById")
@@ -67,6 +70,6 @@ public class ClientController {
 
     @GetMapping("/generarReporteClientes")
     public String generateReport() {
-        return this._reportService.generarInforme();
+        return this._reportService.generarInforme(this._clientService.getTodosClientes(),_servletContext);
     }
 }
