@@ -68,6 +68,8 @@ public class ClientController {
         return this._clientService.registrarCliente(client);
     }
 
+
+
     @GetMapping("/generarReporteClientes")
     public String generateReport() {
         return this._reportService.generarInforme(this._clientService.getTodosClientes(),_servletContext);
